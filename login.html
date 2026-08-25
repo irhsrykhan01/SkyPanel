@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SkyPanel secure sign in" />
+  <title>SkyPanel — Sign In</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <main class="login-shell">
+    <section class="login-card" aria-labelledby="login-title">
+      <div class="brand-mark">S</div>
+      <div class="heading">
+        <p class="eyebrow">SKYPANEL</p>
+        <h1 id="login-title">Welcome back</h1>
+        <p>Sign in to access your control panel.</p>
+      </div>
+
+      <form id="loginForm" autocomplete="on">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" autocomplete="username" placeholder="Enter your username" required />
+
+        <div class="password-label"><label for="password">Password</label><button type="button" id="togglePassword">Show</button></div>
+        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required />
+
+        <button class="submit" type="submit">Sign in</button>
+        <p class="notice" id="notice" role="status"></p>
+      </form>
+
+      <footer>SkyPanel • Secure Control Center</footer>
+    </section>
+  </main>
+  <script src="login.js"></script>
+</body>
+</html>
