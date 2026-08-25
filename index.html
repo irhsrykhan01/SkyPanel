@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyPanel</title>
+  <meta name="description" content="Modern server management panel UI." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">S</div>
+        <div><strong>SkyPanel</strong><span>Control Center</span></div>
+      </div>
+      <nav class="nav">
+        <a class="nav-item active" href="#dashboard">Dashboard</a>
+        <a class="nav-item" href="#servers">Servers</a>
+        <a class="nav-item" href="#activity">Activity</a>
+        <a class="nav-item" href="#settings">Settings</a>
+      </nav>
+      <div class="sidebar-footer">
+        <span class="status-dot"></span>
+        UI Preview Mode
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+        <div>
+          <p class="eyebrow">CONTROL CENTER</p>
+          <h1>Dashboard</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-btn" title="Notifications">●</button>
+          <div class="avatar">R</div>
+        </div>
+      </header>
+
+      <section class="hero-card">
+        <div>
+          <span class="badge">PREVIEW</span>
+          <h2>Everything under control.</h2>
+          <p>Manage your servers and applications from one clean workspace.</p>
+        </div>
+        <button class="primary-btn" id="newServerBtn">+ New Server</button>
+      </section>
+
+      <section class="stats-grid" aria-label="Server statistics">
+        <article class="stat-card"><span>Total Servers</span><strong>3</strong><small>Across your account</small></article>
+        <article class="stat-card"><span>Online</span><strong>2</strong><small>Running normally</small></article>
+        <article class="stat-card"><span>CPU Usage</span><strong>34%</strong><small>Current usage</small></article>
+        <article class="stat-card"><span>Memory</span><strong>5.2 GB</strong><small>of 12 GB allocated</small></article>
+      </section>
+
+      <section class="section" id="servers">
+        <div class="section-heading"><div><p class="eyebrow">WORKSPACE</p><h2>Your Servers</h2></div><button class="ghost-btn">View all</button></div>
+        <div class="server-grid">
+          <article class="server-card">
+            <div class="server-top"><div class="server-icon">W</div><span class="online-pill">● Online</span></div>
+            <h3>SkyVerse WhatsApp</h3><p>Node.js Application</p>
+            <div class="resource-row"><span>CPU 18%</span><span>RAM 512 MB</span></div>
+            <div class="progress"><span style="width:18%"></span></div>
+            <div class="card-actions"><button class="primary-btn small">Console</button><button class="ghost-btn small">Manage</button></div>
+          </article>
+          <article class="server-card">
+            <div class="server-top"><div class="server-icon">M</div><span class="online-pill">● Online</span></div>
+            <h3>Survival Server</h3><p>Minecraft Java</p>
+            <div class="resource-row"><span>CPU 42%</span><span>RAM 4 GB</span></div>
+            <div class="progress"><span style="width:42%"></span></div>
+            <div class="card-actions"><button class="primary-btn small">Console</button><button class="ghost-btn small">Manage</button></div>
+          </article>
+          <article class="server-card muted-card">
+            <div class="server-top"><div class="server-icon">T</div><span class="offline-pill">● Offline</span></div>
+            <h3>SkyCore Test</h3><p>Node.js Application</p>
+            <div class="resource-row"><span>CPU 0%</span><span>RAM 0 MB</span></div>
+            <div class="progress"><span style="width:0%"></span></div>
+            <div class="card-actions"><button class="primary-btn small">Start</button><button class="ghost-btn small">Manage</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section activity-section" id="activity">
+        <div class="section-heading"><div><p class="eyebrow">LATEST</p><h2>Recent Activity</h2></div></div>
+        <div class="activity-list">
+          <div class="activity"><span class="activity-dot"></span><div><strong>SkyVerse WhatsApp</strong><p>Server started successfully</p></div><time>2 min ago</time></div>
+          <div class="activity"><span class="activity-dot"></span><div><strong>Survival Server</strong><p>Resource allocation updated</p></div><time>18 min ago</time></div>
+          <div class="activity"><span class="activity-dot"></span><div><strong>SkyCore Test</strong><p>Server stopped</p></div><time>1 hr ago</time></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
